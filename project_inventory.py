@@ -19,7 +19,10 @@ def check_intvalue():
     while True:
         try:
             a = int(input("Quantità: "))
-            break
+            if a >0:
+                break
+            else:
+                print(emoji.emojize(":warning: ATTENZIONE! \n Il valore inserito deve essere un numero intero positivo!"))
         except:
             print(emoji.emojize(":warning: ATTENZIONE! \n Il valore inserito non è un numero intero!"))  
     return a
@@ -29,7 +32,10 @@ def check_floatvalue():
     while True:
         try:
             a = float(input())
-            break
+            if a >0:
+                break
+            else:
+                print(emoji.emojize(":warning: ATTENZIONE! \n Il valore inserito deve essere un numero positivo!"))
         except:
             print(emoji.emojize(":warning: ATTENZIONE! \n Il valore inserito non è ammesso!"))  
     return a
